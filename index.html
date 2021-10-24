@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+    <div class="container-fluid" id="ana-sayfa">
+
+            <div class="row h-100">
+                <div class="col-12" id="ana-header">
+                    <img src="img/logo.png" width="400" height="200" alt="" srcset="">
+                    <p class="h1 text-start" id="header-text">
+                        Çok yakinda yanınızdayız
+                    </p>
+                    <button type="button" class="btn btn-lg active-bg m-4" id="btn-register">ön başvuru</button>
+                </div>
+            </div>
+
+    </div>
+
+    <div class="container-fluid d-none" id="basvuru-formu">
+
+        <div class="container">
+            <!-- Tabs -->
+            <div class="row">
+                <div class="container col-12">
+                    <ul class="row nav nav-pills nav-justified">
+                        <li class="col-sm-12 nav-item">
+                          <a class="nav-link active-bg" id="tab-temel" href="#">Temel Bilgiler</a>
+                        </li>
+                        <li class="col-sm-12 nav-item">
+                          <a class="nav-link disabled" id="tab-parola" href="#">Şifre Oluşturma</a>
+                        </li>
+                        <li class="col-sm-12 nav-item">
+                          <a class="nav-link disabled" id="tab-sirket" href="#">Şirket Bilgilerinin Girişi</a>
+                        </li>
+                        <li class="col-sm-12 nav-item">
+                          <a class="nav-link disabled" id="tab-entegrasyon" href="#">Operasyon, Adres ve İletişim Bilgilerinin Girişi</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Tabs -->
+
+            <!-- Forms -->
+            <div class="row">
+
+                <form id="temel-form">
+
+                    <div class="row g-3 m-3">
+                        <div class="col-md-6 col-sm-12">
+                            <label for="full_name" class="form-label">Şirket yetkilisinin adı ve soyadı:</label>
+                            <input type="text" class="form-control" name="full_name" id="full_name" placeholder="Adınız Soyadınız" autofocus required>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label for="phone" class="form-label">Şirket yetkilisinin telefon numarası:</label>
+                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Telefon numaranız" required pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
+                        </div>
+                    </div>
+
+                    <div class="row g-3 m-3">
+                        <div class="col-md-6 col-sm-12">
+                            <label for="email" class="form-label">Şirket yetkilisinin e-posta adresi:</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="E-posta adresiniz" required>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label for="sirket" class="form-label">Şirket türü:</label>
+                            <select class="form-select" name="sirket" id="sirket" required>
+                                <option selected>- Lütfen Seçiniz -</option>
+                                <option value="1">Anonim Şirket</option>
+                                <option value="2">Limited Şirket</option>
+                                <option value="3">Sermaye Şirketi Olmayan Şirket (Şahıs vb.)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 m-3">
+                        <div class="col-md-6 col-sm-12">
+                            <label for="tcvkn" class="form-label">Lütfen TC kimlik numaranızı girin:</label>
+                            <input type="number" class="form-control" name="tcvkn" id="tcvkn" placeholder="T.C. kimlik numarası" required>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label for="kimlikOn" class="form-label">Şirket yetkilisinin kimliğinin ön yüzünün fotoğrafı:</label>
+                            <input type="file" class="form-control" name="kimlikOn" id="kimlikOn" required />
+                        </div>
+                    </div>
+
+                    <div class="row g-3 m-3">
+                        <div class="col-md-6 col-sm-12">
+                            <label for="kimlikArka" class="form-label">Şirket yetkilisinin kimliğinin arka yüzünün fotoğrafı:</label>
+                            <input type="file" class="form-control" name="kimlikArka" id="kimlikArka" required />
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label for="ikametgah" class="form-label">Şirket yetkilisinin E-devlet üzerinden alınmış ikametgah belgesi:</label>
+                            <input type="file" class="form-control" name="ikametgah" id="ikametgah" required />
+                        </div>
+
+                    </div>
+
+                    <div class="row g-3 m-3">
+                        <div class="col-md-6 col-sm-12">
+                            <label for="il" class="form-label">Faaliyet gösterilen il:</label>
+                            <select class="form-select" name="il" id="il" required>
+                                <option selected>- Lütfen Seçiniz -</option>
+                                <option value="1">Adana</option>
+                                <option value="2">Adıyaman</option>
+                                <option value="3">Afyonkarahisar</option>
+                                <option value="4">Ağrı</option>
+                                <option value="5">Amasya</option>
+                                <option value="6">Ankara</option>
+                                <option value="7">Antalya</option>
+                                <option value="8">Artvin</option>
+                                <option value="9">Aydın</option>
+                                <option value="10">Balıkesir</option>
+                                <option value="11">Bilecik</option>
+                                <option value="12">Bingöl</option>
+                                <option value="13">Bitlis</option>
+                                <option value="14">Bolu</option>
+                                <option value="15">Burdur</option>
+                                <option value="16">Bursa</option>
+                                <option value="17">Çanakkale</option>
+                                <option value="18">Çankırı</option>
+                                <option value="19">Çorum</option>
+                                <option value="20">Denizli</option>
+                                <option value="21">Diyarbakır</option>
+                                <option value="22">Edirne</option>
+                                <option value="23">Elazığ</option>
+                                <option value="24">Erzincan</option>
+                                <option value="25">Erzurum</option>
+                                <option value="26">Eskişehir</option>
+                                <option value="27">Gaziantep</option>
+                                <option value="28">Giresun</option>
+                                <option value="29">Gümüşhane</option>
+                                <option value="30">Hakkâri</option>
+                                <option value="31">Hatay</option>
+                                <option value="32">Isparta</option>
+                                <option value="33">Mersin</option>
+                                <option value="34">İstanbul</option>
+                                <option value="35">İzmir</option>
+                                <option value="36">Kars</option>
+                                <option value="37">Kastamonu</option>
+                                <option value="38">Kayseri</option>
+                                <option value="39">Kırklareli</option>
+                                <option value="40">Kırşehir</option>
+                                <option value="41">Kocaeli</option>
+                                <option value="42">Konya</option>
+                                <option value="43">Kütahya</option>
+                                <option value="44">Malatya</option>
+                                <option value="45">Manisa</option>
+                                <option value="46">Kahramanmaraş</option>
+                                <option value="47">Mardin</option>
+                                <option value="48">Muğla</option>
+                                <option value="49">Muş</option>
+                                <option value="50">Nevşehir</option>
+                                <option value="51">Niğde</option>
+                                <option value="52">Ordu</option>
+                                <option value="53">Rize</option>
+                                <option value="54">Sakarya</option>
+                                <option value="55">Samsun</option>
+                                <option value="56">Siirt</option>
+                                <option value="57">Sinop</option>
+                                <option value="58">Sivas</option>
+                                <option value="59">Tekirdağ</option>
+                                <option value="60">Tokat</option>
+                                <option value="61">Trabzon</option>
+                                <option value="62">Tunceli</option>
+                                <option value="63">Şanlıurfa</option>
+                                <option value="64">Uşak</option>
+                                <option value="65">Van</option>
+                                <option value="66">Yozgat</option>
+                                <option value="67">Zonguldak</option>
+                                <option value="68">Aksaray</option>
+                                <option value="69">Bayburt</option>
+                                <option value="70">Karaman</option>
+                                <option value="71">Kırıkkale</option>
+                                <option value="72">Batman</option>
+                                <option value="73">Şırnak</option>
+                                <option value="74">Bartın</option>
+                                <option value="75">Ardahan</option>
+                                <option value="76">Iğdır</option>
+                                <option value="77">Yalova</option>
+                                <option value="78">Karabük</option>
+                                <option value="79">Kilis</option>
+                                <option value="80">Osmaniye</option>
+                                <option value="81">Düzce</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label for="ilce" class="form-label">Faaliyet gösterilen ilçe:</label>
+                            <input type="text" class="form-control" name="ilce" id="ilce" placeholder="Faaliyet gösterdiğiniz ilçe" required>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 m-3">
+                        <div class="col-md-6 col-sm-12">
+                            <label for="kategori" class="form-label">Satış kategorisi:</label>
+                            <input type="text" class="form-control" name="kategori" id="kategori" placeholder="Lütfen yazınız." required>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <input type="submit" class="form-control" id="temel-btn" style="background-color:#F16C32; color: #fff;" value="Kaydet ve Devam Et">
+                        </div>
+                    </div>
+    
+                </form>
+
+                <form id="parola-form" class="d-none">
+
+                    <div class="row g-3 m-3">
+                        <div class="col-md-6 col-sm-12">
+                            <label for="parola" class="form-label">Parolanız:</label>
+                            <input type="password" class="form-control" id="parola" name="parola" placeholder="Parola belirleyiniz..." autofocus required pattern=".{8,20}" title="min 8 ve max 20">
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label for="parola" class="form-label">Lütfen parolanızı yeniden yazınız:</label>
+                            <input type="password" class="form-control" id="parola2" name="parola2" placeholder="Lütfen belirlediğiniz parolayı yeniden yazınız..." required pattern=".{8,20}" title="min 8 ve max 20">
+                        </div>
+
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-6 col-sm-12">
+                            <input type="submit" class="form-control" id="parola-btn" style="background-color:#F16C32; color: #fff;" value="Kaydet ve Devam Et">
+                        </div>
+                    </div>
+
+                </form>
+
+                <form id="sirket-form" class="d-none">
+
+                    <div class="row g-3">
+                        <div class="col-md-6 col-sm-12">
+                            <label for="magazaAdi" class="form-label">Mağaza adı:</label>
+                            <input type="text" class="form-control" name="magazaAdi" id="magazaAdi" placeholder="Mağaza adı" autofocus required>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label for="kep" class="form-label">KEP Adresi:</label>
+                            <input type="email" class="form-control" name="kep" id="kep" placeholder="Kayıtlı Elektronik Posta adresiniz" required>
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-6 col-sm-12">
+                            <label for="mersis" class="form-label">MERSİS Numarası:</label>
+                            <input type="number" class="form-control" name="mersis" id="mersis" placeholder="MERSİS Numaranız" required>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label for="fatura" class="form-label">Fatura türü:</label>
+                            <select class="form-select" name="fatura" id="fatura" required>
+                                <option selected>- Lütfen Seçiniz -</option>
+                                <option value="1">Basılı Fatura</option>
+                                <option value="2">Dijital Fatura</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-6 col-sm-12">
+                            <label for="iban" class="form-label">Firmanıza ait İBAN numarası:</label>
+                            <input type="text" class="form-control" name="iban" id="iban" placeholder="Firmanıza ait iban numarası" required>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <label for="vergiLevhe" class="form-label">Şirketinizin vergi levhası:</label>
+                            <input type="file" class="form-control" name="vergiLevhe" id="vergiLevhe" required />
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-6 col-sm-12">
+                            <label for="imza" class="form-label">İmza sirküsü:</label>
+                            <input type="file" class="form-control" name="imza" id="imza" required />
+                        </div>
+                        <div class="col-md-6 col-sm-12" id="div-gazete">
+                            <label for="gazete" class="form-label">Ticari Sicil Gazetesi:</label>
+                            <input type="file" class="form-control" name="gazete" id="gazete" />
+                        </div>
+                    </div>    
+
+                    <div class="row g-3">
+                        <div class="col-md-6 col-sm-12" id="div-belge">
+                            <label for="belge" class="form-label">Faaliyet Belgesi:</label>
+                            <input type="file" class="form-control" name="belge" id="belge" />
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <input type="submit" class="form-control" id="sirket-btn" style="background-color:#F16C32; color: #fff;" value="Kaydet ve Devam Et">
+                        </div>
+                    </div>
+
+                </form>
+
+                <form id="entegrasyon-form" class="d-none">
+
+                    <div class="container border p-3">
+                        <h2>Lütfen operasyon bilgilerinizi giriniz.</h2>
+                        <div class="row g-3">
+                            <div class="col-md-6 col-sm-12">
+                                <label for="kargoFirma">Çalışılacak kargo firmalarını aralarına virgül koyarak belirtiniz:</label>
+                                <input type="text" class="form-control" name="kargoFirma" id="kargoFirma" placeholder="Lütfen çalışacağınız kargo firmalarını belirtin" autofocus required>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <label for="teslimSure" class="form-label">Siparişleri ne kadar sürede kargoya teslim edersiniz?</label>
+                                <input type="text" class="form-control" name="teslimSure" id="teslimSure" placeholder="Örnek: 2 gün" required>
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6 col-sm-12">
+                                <label for="entegrasyonModel" class="form-label">Tercih ettiğiniz entegrasyon modeli:</label>
+                                <input type="text" class="form-control" name="entegrasyonModel" id="entegrasyonModel" placeholder="Lütfen tercih ettiğiniz entegrasyon modelini belirtiniz" required>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="container border p-3">
+                        <h2>Lütfen adres bilgilerinizi giriniz.</h2>
+                        <div class="row g-3">
+                            <div class="col-md-6 col-sm-12">
+                                <label for="faturaAdres" class="form-label">Fatura adresiniz:</label>
+                                <input type="text" class="form-control" name="faturaAdres" id="faturaAdres" placeholder="Lütfen keseceğiniz faturaların üzerinde görünecek adresi giriniz." required>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <label for="sirketAdres" class="form-label">Şirket merkezi adresiniz:</label>
+                                <input type="text" class="form-control" name="sirketAdres" id="sirketAdres" placeholder="Lütfen şirket merkezinizin adresini giriniz." required>
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6 col-sm-12">
+                                <label for="depoAdres" class="form-label">Sevkiyat deposu adresiniz:</label>
+                                <input type="text" class="form-control" name="depoAdres" id="depoAdres" placeholder="Lütfen ürünleri göndereceğiniz deponun adresini giriniz." required>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <label for="iadeAdres" class="form-label">İade deposu adresiniz:</label>
+                                <input type="text" class="form-control" name="iadeAdres" id="iadeAdres" placeholder="Lütfen iade edilen ürünlerin gönderileceği deponun adresini giriniz." required>
+                            </div>
+                        </div>
+
+                    </div>
+    
+                    <div class="container border p-3">
+                        <h2>Lütfen iletişim bilgilerinizi giriniz.</h2>
+                        <h4 class="m-3 p-3 border-bottom text-warning">Finans sorumlunuzun;</h4>
+                        
+                        <div class="row g-3">
+                            <div class="col-md-6 col-sm-12">
+                                <label for="finansName" class="form-label">Adı ve soyadı:</label>
+                                <input type="text" class="form-control" name="finansName" id="finansName" placeholder="Lütfen finans sorumlunuzun adını ve soyadını giriniz." required>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <label for="finansPhone" class="form-label">Telefon numarası:</label>
+                                <input type="tel" class="form-control" name="finansPhone" id="finansPhone" placeholder="Lütfen finans sorumlunuzun telefon numarasını giriniz." required pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6 col-sm-12">
+                                <label for="finansEmail" class="form-label">E-posta adresi:</label>
+                                <input type="email" class="form-control" name="finansEmail" id="finansEmail" placeholder="Lütfen finans sorumlunuzun e-posta adresini giriniz." required>
+                            </div>
+                        </div>
+
+                        <h4 class="m-3 p-3 border-bottom text-warning">Müşteri Hizmetleri sorumlunuzun;</h4>
+                        
+                        <div class="row g-3">
+                            <div class="col-md-6 col-sm-12">
+                                <label for="musteriName" class="form-label">Adı ve soyadı:</label>
+                                <input type="text" class="form-control" name="musteriName" id="musteriName" placeholder="Lütfen müşteri hizmetleri sorumlunuzun adını ve soyadını giriniz." required>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <label for="musteriPhone" class="form-label">Telefon numarası:</label>
+                                <input type="tel" class="form-control" name="musteriPhone" id="musteriPhone" placeholder="Lütfen müşteri hizmetleri sorumlunuzun telefon numarasını giriniz." required pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6 col-sm-12">
+                                <label for="musteriEmail" class="form-label">E-posta adresi:</label>
+                                <input type="email" class="form-control" name="musteriEmail" id="musteriEmail" placeholder="Lütfen müşteri hizmetleri sorumlunuzun e-posta adresini giriniz." required>
+                            </div>
+                        </div>
+
+                        <h4 class="m-3 p-3 border-bottom text-warning">Operasyon sorumlunuzun;</h4>
+
+                        <div class="row g-3">
+                            <div class="col-md-6 col-sm-12">
+                                <label for="operasyonName" class="form-label">Adı ve soyadı:</label>
+                                <input type="text" class="form-control" name="operasyonName" id="operasyonName" placeholder="Lütfen operasyon sorumlunuzun adını ve soyadını giriniz." required>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <label for="operasyonPhone" class="form-label">Telefon numarası:</label>
+                                <input type="tel" class="form-control" name="operasyonPhone" id="operasyonPhone" placeholder="Lütfen operasyon sorumlunuzun telefon numarasını giriniz." required pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6 col-sm-12">
+                                <label for="operasyonEmail" class="form-label">E-posta adresi:</label>
+                                <input type="email" class="form-control" name="operasyonEmail" id="operasyonEmail" placeholder="Lütfen operasyon sorumlunuzun e-posta adresini giriniz." required>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-6 col-sm-12">
+                            <input type="submit" class="form-control" id="entegrasyon-btn" style="background-color:#F16C32; color: #fff;" value="Kaydet ve Kaydı Tamamla">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+            <!-- Forms -->
+
+        </div>
+
+    </div>
+    
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

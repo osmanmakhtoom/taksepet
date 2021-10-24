@@ -1,0 +1,20 @@
+.active-bg {
+    background-color: #F16C32 !important;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+#ana-header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/bg1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#header-text {
+    margin-top: 50px;
+    margin-left: 30px;
+    color: #F16C32 !important;
+}
